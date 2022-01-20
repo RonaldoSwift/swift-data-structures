@@ -14,10 +14,10 @@ import Foundation
  */
 
 
-var isMainMenuStarted: Bool = true
+var isMainMenuRunning: Bool = true
 var option: String
 
-while (isMainMenuStarted) {
+while (isMainMenuRunning) {
     
     let mainMenuInformation = """
     **************EMPRESA SOLDEX**************
@@ -51,10 +51,10 @@ while (isMainMenuStarted) {
         
         break
     case "5":
-        isMainMenuStarted = false
+        isMainMenuRunning = false
         break
     default:
-        isMainMenuStarted = false
+        isMainMenuRunning = false
         break
     }
     
