@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BACC26427B23B1600792925 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 2BACC26327B23B1600792925 /* Collections */; };
+		2BACC26627B23B3400792925 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 2BACC26527B23B3400792925 /* OrderedCollections */; };
 		FB12AC862640692A00390EE4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB12AC852640692A00390EE4 /* main.swift */; };
 		FBD5EE2727A3435800B92358 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = FBD5EE2627A3435800B92358 /* DequeModule */; };
 /* End PBXBuildFile section */
@@ -34,18 +36,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BACC26427B23B1600792925 /* Collections in Frameworks */,
 				FBD5EE2727A3435800B92358 /* DequeModule in Frameworks */,
+				2BACC26627B23B3400792925 /* OrderedCollections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BACC26227B23B1600792925 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FB12AC792640692900390EE4 = {
 			isa = PBXGroup;
 			children = (
 				FB12AC842640692900390EE4 /* swift-data-structures */,
 				FB12AC832640692900390EE4 /* Products */,
+				2BACC26227B23B1600792925 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +96,8 @@
 			name = "swift-data-structures";
 			packageProductDependencies = (
 				FBD5EE2627A3435800B92358 /* DequeModule */,
+				2BACC26327B23B1600792925 /* Collections */,
+				2BACC26527B23B3400792925 /* OrderedCollections */,
 			);
 			productName = "swift-data-structures";
 			productReference = FB12AC822640692900390EE4 /* swift-data-structures */;
@@ -308,6 +322,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2BACC26327B23B1600792925 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBD5EE2527A3435800B92358 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		2BACC26527B23B3400792925 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBD5EE2527A3435800B92358 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
 		FBD5EE2627A3435800B92358 /* DequeModule */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FBD5EE2527A3435800B92358 /* XCRemoteSwiftPackageReference "swift-collections" */;
