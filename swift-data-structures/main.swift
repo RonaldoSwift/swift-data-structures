@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import DequeModule
 
 /**
  Para que entiendas mejor el codigo aquí esta algunos temas que debes leer
@@ -83,16 +84,41 @@ struct StackDeDesarme{
 //3   *********************************************
 
 struct RevisionYReparacion{
+    let Parte: Int
+    let Oper1: Int
+    let Oper2: Int
+    let Oper3: Int
+    let Oper4: Int
+    let Oper5: Int
     
+    func imprimir(){
+        print("          ETAPA DE REVISION Y REPARACION         ")
+        print("  Parte   Oper1   Oper2   Oper3   Oper4   Oper5  ")
+        print("_________________________________________________")
+        
+    }
 }
 
+//4   *********************************************
 
+struct Ensamblaje{
+    let etapaDeEnsamblaje: Int
+    
+    func imprimir(){
+        print("       ETAPA ENSAMBLAJE      ")
+        print("     Tiempo de ensamblaje    ")
+        print("-----------------------------")
+        
+    }
+}
 
 //--------------------------------
 var isMainMenuRunning: Bool = true
 var option: String
 var stack: StackDeArribo = StackDeArribo()
 var stack2: StackDeDesarme = StackDeDesarme()
+var colaDoble: Deque<RevisionYReparacion> = []
+var colaDoble2: Deque<Ensamblaje> = []
 
 while(isMainMenuRunning){
     print("***************************************************")
@@ -124,7 +150,7 @@ while(isMainMenuRunning){
         
     case "2":
         
-        print(" ----------------------------------- ")
+        print(" ------------------------------------ ")
         print("|  Operario  |    Tiempo de Servicio |")
         print("|                        (Minutos)   |")
         print("|------------------------------------|")
@@ -133,7 +159,7 @@ while(isMainMenuRunning){
         print("|      2     |        111 - 120      |")
         print("|____________________________________|")
         print("|      3     |         40 - 80       |")
-        print("| __________________________________ |")
+        print("|____________________________________|")
         
         print("Ingrese codigo de desarme: ")
         let codigoDeDesarme = readLine()!
@@ -163,7 +189,6 @@ while(isMainMenuRunning){
         break
         
     case "3":
-        
         print(" Secuencia de operaciones: ")
         
         print(" ------------------------------------------------------------------------------------------------------------ ")
@@ -184,12 +209,66 @@ while(isMainMenuRunning){
         print("| 1 - 4  |     2 - 8     |     3 - 15    |    10 - 20    |      12       |     3 - 4      |")
         print("|_________________________________________________________________________________________|")
         
-        print("Ingrese numero de producto: ")
+        print("Ingrese el numero de parte de 1-4: ")
+        let numeroDeParte = Int(readLine()!)!
+        print("Ingrese secuencia de operaciones: ")
         
+        let tiempoDeOperaciones1 = Int(readLine()!)!
+        let tiempoDeOperaciones2 = Int(readLine()!)!
+        let tiempoDeOperaciones3 = Int(readLine()!)!
+        let tiempoDeOperaciones4 = Int(readLine()!)!
+        let tiempoDeOperaciones5 = Int(readLine()!)!
+        
+        if(numeroDeParte == 1){
+            if(tiempoDeOperaciones1 >= 2 && tiempoDeOperaciones1 <= 8){
+                colaDoble.prepend(RevisionYReparacion(Parte: numeroDeParte, Oper1: tiempoDeOperaciones1, Oper2: tiempoDeOperaciones2, Oper3: tiempoDeOperaciones3, Oper4: tiempoDeOperaciones4, Oper5: tiempoDeOperaciones5))
+            }
+        }
+        else if(numeroDeParte == 2){
+            if(tiempoDeOperaciones1 >= 3 && tiempoDeOperaciones1 <= 15){
+                colaDoble.prepend(RevisionYReparacion(Parte: numeroDeParte, Oper1: tiempoDeOperaciones1, Oper2: tiempoDeOperaciones2, Oper3: tiempoDeOperaciones3, Oper4: tiempoDeOperaciones4, Oper5: tiempoDeOperaciones5))
+            }
+        }
+        else if(numeroDeParte == 3){
+            if(tiempoDeOperaciones1 >= 10 && tiempoDeOperaciones1 <= 20){
+                colaDoble.prepend(RevisionYReparacion(Parte: numeroDeParte, Oper1: tiempoDeOperaciones1, Oper2: tiempoDeOperaciones2, Oper3: tiempoDeOperaciones3, Oper4: tiempoDeOperaciones4, Oper5: tiempoDeOperaciones5))
+            }
+        }
+        else if(numeroDeParte == 4){
+            if(tiempoDeOperaciones1 == 12){
+                colaDoble.prepend(RevisionYReparacion(Parte: numeroDeParte, Oper1: tiempoDeOperaciones1, Oper2: tiempoDeOperaciones2, Oper3: tiempoDeOperaciones3, Oper4: tiempoDeOperaciones4, Oper5: tiempoDeOperaciones5))
+            }
+        }
+        else if(numeroDeParte == 5){
+            if(tiempoDeOperaciones1 >= 3 && tiempoDeOperaciones1 <= 4){
+                colaDoble.prepend(RevisionYReparacion(Parte: numeroDeParte, Oper1: tiempoDeOperaciones1, Oper2: tiempoDeOperaciones2, Oper3: tiempoDeOperaciones3, Oper4: tiempoDeOperaciones4, Oper5: tiempoDeOperaciones5))
+            }
+        }
+        else{
+            print("Error")
+        }
+        
+        /* colaDoble.prepend(RevisionYReparacion(Parte: 1, Oper1: 5, Oper2: 6, Oper3: 11, Oper4: 12, Oper5: 3))
+         colaDoble.prepend(RevisionYReparacion(Parte: 2, Oper1: 5, Oper2: 6, Oper3: 11, Oper4: 12, Oper5: 3))
+         colaDoble.prepend(RevisionYReparacion(Parte: 3, Oper1: 5, Oper2: 6, Oper3: 11, Oper4: 12, Oper5: 3))
+         colaDoble.append(RevisionYReparacion(Parte: 4, Oper1: 5, Oper2: 6, Oper3: 11, Oper4: 12, Oper5: 3))
+         colaDoble.popFirst()
+         colaDoble.popLast()
+         
+         print(colaDoble)
+         */
         
         break
     case "4":
-        print("Segunda opcion")
+        print("Ingrese etapa de ensamblaje")
+        let etapaDeEnsamblaje = Int(readLine()!)!
+        
+        
+        if(etapaDeEnsamblaje <= 80 && etapaDeEnsamblaje >= 110){
+            colaDoble2.prepend(Ensamblaje(etapaDeEnsamblaje: <#T##Int#>))
+        }
+        
+        
         
         break
     case "5":
@@ -204,16 +283,3 @@ while(isMainMenuRunning){
     }
 }
 
-/*
- 
- 
- 
- func imprimir(){
-     
-     print("          ETAPA DE REVISION Y REPARACION         ")
-     print("  Parte   Oper1   Oper2   Oper3   Oper4   Oper5  ")
-     print("_________________________________________________")
-     print("")
- }
- 
- */

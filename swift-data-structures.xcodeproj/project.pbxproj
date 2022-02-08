@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		FB12AC862640692A00390EE4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB12AC852640692A00390EE4 /* main.swift */; };
+		FBD5EE2727A3435800B92358 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = FBD5EE2627A3435800B92358 /* DequeModule */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD5EE2727A3435800B92358 /* DequeModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +82,9 @@
 			dependencies = (
 			);
 			name = "swift-data-structures";
+			packageProductDependencies = (
+				FBD5EE2627A3435800B92358 /* DequeModule */,
+			);
 			productName = "swift-data-structures";
 			productReference = FB12AC822640692900390EE4 /* swift-data-structures */;
 			productType = "com.apple.product-type.tool";
@@ -107,6 +112,9 @@
 				Base,
 			);
 			mainGroup = FB12AC792640692900390EE4;
+			packageReferences = (
+				FBD5EE2527A3435800B92358 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = FB12AC832640692900390EE4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -287,6 +295,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FBD5EE2527A3435800B92358 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FBD5EE2627A3435800B92358 /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FBD5EE2527A3435800B92358 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FB12AC7A2640692900390EE4 /* Project object */;
 }
