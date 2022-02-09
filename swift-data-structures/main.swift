@@ -99,12 +99,6 @@ struct RevisionYReparacion{
 struct Ensamblaje{
     let etapaDeEnsamblaje: Int
     
-    func imprimir(){
-        print("       ETAPA ENSAMBLAJE      ")
-        print("     Tiempo de ensamblaje    ")
-        print("-----------------------------")
-        
-    }
 }
 
 //--------------------------------
@@ -244,7 +238,7 @@ while(isMainMenuRunning){
                 )
                 
             }
-    
+            
         }
         else if(numeroDeParte == 3) {
             
@@ -295,8 +289,17 @@ while(isMainMenuRunning){
         
         break
     case "4":
-       
-    
+        
+        print("Ingrese tiempo de ensamblaje: ")
+        let tiempoDeEnsamblaje = Int(readLine()!)!
+        
+        if(tiempoDeEnsamblaje >= 80 && tiempoDeEnsamblaje <= 110){
+            colaDobleDeEnsamblaje.prepend(Ensamblaje.init(etapaDeEnsamblaje: tiempoDeEnsamblaje))
+        }
+        else{
+            print("Error", "El numero no esta en el rango de 80 - 110", separator: ":")
+        }
+        
         break
     case "5":
         stackDeArribo.imprimir()
@@ -311,6 +314,13 @@ while(isMainMenuRunning){
         }
         
         // imprimer la tabla de la etapa 4
+        
+        print("       ETAPA ENSAMBLAJE      ")
+        print("     Tiempo de ensamblaje    ")
+        print("-----------------------------")
+        for item in colaDobleDeEnsamblaje {
+            print("  \(item.etapaDeEnsamblaje)")
+        }
         
         break
     case "6":
