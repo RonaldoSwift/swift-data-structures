@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FB12AC862640692A00390EE4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB12AC852640692A00390EE4 /* main.swift */; };
+		FBD5EE2927B4C8AD00B92358 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD5EE2827B4C8AD00B92358 /* Stack.swift */; };
+		FBD5EE2B27B4C99C00B92358 /* Deque.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD5EE2A27B4C99C00B92358 /* Deque.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +28,8 @@
 		FB12AC822640692900390EE4 /* swift-data-structures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "swift-data-structures"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB12AC852640692A00390EE4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		FB12AC8D26406E0E00390EE4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FBD5EE2827B4C8AD00B92358 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		FBD5EE2A27B4C99C00B92358 /* Deque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deque.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			children = (
 				FB12AC852640692A00390EE4 /* main.swift */,
 				FB12AC8D26406E0E00390EE4 /* README.md */,
+				FBD5EE2827B4C8AD00B92358 /* Stack.swift */,
+				FBD5EE2A27B4C99C00B92358 /* Deque.swift */,
 			);
 			path = "swift-data-structures";
 			sourceTree = "<group>";
@@ -121,7 +127,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD5EE2927B4C8AD00B92358 /* Stack.swift in Sources */,
 				FB12AC862640692A00390EE4 /* main.swift in Sources */,
+				FBD5EE2B27B4C99C00B92358 /* Deque.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
