@@ -7,27 +7,6 @@
 
 import Foundation
 
-//var pilaDeEnteros: Stack<Int> = Stack.init()
-//pilaDeEnteros.push(2)
-//pilaDeEnteros.push(3)
-//pilaDeEnteros.push(5)
-//pilaDeEnteros.pop()
-//
-//print(pilaDeEnteros)
-//
-//struct Persona{
-//    var nombre: String
-//    var edad: Int
-//}
-//
-//var dequePersonas: Deque<Persona> = Deque.init()
-//
-//dequePersonas.enqueue(Persona.init(nombre: "Edgar", edad: 20))
-//dequePersonas.enqueue(Persona.init(nombre: "Ana", edad: 34))
-//dequePersonas.enqueueFront(Persona.init(nombre: "Jose", edad: 89))
-//
-//print(dequePersonas)
-
 //Stack
 struct Arribo{
     public var numeroDeProducto: Int
@@ -50,15 +29,13 @@ struct RevisionYReparacion{
 }
 struct Ensamblaje{
     let etapaDeEnsamblaje: Int
-    
+
 }
 
 var stackDeArribo: Stack<Arribo> = Stack<Arribo>()
 var stackDeDesarme: Stack<Desarme> = Stack<Desarme>()
 var dequeDeRevisionYReparacion: Deque<RevisionYReparacion> = Deque<RevisionYReparacion>()
 var dequeDeEnsamblaje: Deque<Ensamblaje> = Deque<Ensamblaje>()
-
-
 
 //Menu principal
 
@@ -258,17 +235,18 @@ while(isMainMenuRunning){
         print("       ETAPA DE ARRIBO        ")
         print("   Nro.Producto     Minutos    ")
         print("_______________________________")
-        for item in stackDeArribo {
-            print("        \(item.numeroDeProducto)              \(item.tiempoDeLlegada)")
+        let arribos = stackDeArribo.getElemnts()
+        arribos.forEach { item in
+            print("    \(item.numeroDeProducto)            \(item.tiempoDeLlegada)")
         }
-        
         // 2 Tabla
         print("            ETAPA DE DESARME            ")
         print("  Codigo         Operario        Tiempo ")
         print("  Desarme                       Servicio")
         print("________________________________________")
-        for item2 in stackDeDesarme{
-            print("    \(item2.codigoDeDesarme)             \(item2.operario )               \(item2.tiempoDeServicio)")
+        let desarmes = stackDeDesarme.getElemnts()
+        desarmes.forEach { item in
+            print("    \(item.codigoDeDesarme)     \(item.operario)       \(item.tiempoDeServicio)")
         }
         
         // 3 Tabla
@@ -276,7 +254,8 @@ while(isMainMenuRunning){
         print("          ETAPA DE REVISION Y REPARACION         ")
         print("  Parte   Oper1   Oper2   Oper3   Oper4   Oper5  ")
         print("_________________________________________________")
-        for item in dequeDeRevisionYReparacion {
+        let revisionYReparacion = dequeDeRevisionYReparacion.getElemnts()
+        revisionYReparacion.forEach { item in
             print("  \(item.parte)  \(item.oper1)   \(item.oper2)    \(item.oper3)    \(item.oper4)    \(item.oper5)")
         }
         
@@ -285,16 +264,39 @@ while(isMainMenuRunning){
         print("       ETAPA ENSAMBLAJE      ")
         print("     Tiempo de ensamblaje    ")
         print("-----------------------------")
-        for item in dequeDeEnsamblaje {
+        let dequeDeEnsamblaje = dequeDeEnsamblaje.getElemnts()
+        dequeDeEnsamblaje.forEach { item in
             print("  \(item.etapaDeEnsamblaje)")
         }
-        
         break
+        
     case "6":
         isMainMenuRunning = false
         break
+        
     default:
         isMainMenuRunning = false
         break
     }
 }
+
+//var pilaDeEnteros: Stack<Int> = Stack.init()
+//pilaDeEnteros.push(2)
+//pilaDeEnteros.push(3)
+//pilaDeEnteros.push(5)
+//pilaDeEnteros.pop()
+//
+//print(pilaDeEnteros)
+//
+//struct Persona{
+//    var nombre: String
+//    var edad: Int
+//}
+//
+//var dequePersonas: Deque<Persona> = Deque.init()
+//
+//dequePersonas.enqueue(Persona.init(nombre: "Edgar", edad: 20))
+//dequePersonas.enqueue(Persona.init(nombre: "Ana", edad: 34))
+//dequePersonas.enqueueFront(Persona.init(nombre: "Jose", edad: 89))
+//
+//print(dequePersonas)
