@@ -17,45 +17,27 @@ import Foundation
 var isMainMenuRunning: Bool = true
 var option: String
 
-while (isMainMenuRunning) {
+while(isMainMenuRunning){
     
-    let mainMenuInformation = """
-    **************EMPRESA SOLDEX**************
-    1. Registrar Arribo
-    2. Registrar Desarme
-    3. Registrar ...
-    4. Registrar ...
-    5. Salir
-    ******************************************
-    """
+    print("\n ----------------------------------------------------")
+    print("|               EMPRESA DE CONFESIONES               |")
+    print("|----------------------------------------------------|")
+    print("|               1)Fase de Produccion                 |")
+    print("|               2)                                   |")
+    print("|               3)Salir                              |")
+    print("|____________________________________________________|\n")
     
-    print(mainMenuInformation)
-    print("\nQue opcion desea?")
+    print(" Elija una opcion 1-3")
     option = readLine()!
     
-    switch(option) {
+    switch(option){
     case "1":
-        print("Primera opcion")
-        
         break
     case "2":
-        print("Segunda opcion")
-        
         break
     case "3":
-        print("Segunda opcion")
-        
-        break
-    case "4":
-        print("Segunda opcion")
-        
-        break
-    case "5":
-        isMainMenuRunning = false
         break
     default:
-        isMainMenuRunning = false
-        break
+        print("Error")
     }
-    
 }
