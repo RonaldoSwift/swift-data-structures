@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		FB12AC862640692A00390EE4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB12AC852640692A00390EE4 /* main.swift */; };
+		FBA4C88027BD87A1001CEC03 /* Priority Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4C87F27BD87A1001CEC03 /* Priority Queue.swift */; };
+		FBA4C88227BD87FA001CEC03 /* Deque.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4C88127BD87FA001CEC03 /* Deque.swift */; };
+		FBA4C88427BF14DA001CEC03 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4C88327BF14DA001CEC03 /* Heap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +29,9 @@
 		FB12AC822640692900390EE4 /* swift-data-structures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "swift-data-structures"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB12AC852640692A00390EE4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		FB12AC8D26406E0E00390EE4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FBA4C87F27BD87A1001CEC03 /* Priority Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Priority Queue.swift"; sourceTree = "<group>"; };
+		FBA4C88127BD87FA001CEC03 /* Deque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deque.swift; sourceTree = "<group>"; };
+		FBA4C88327BF14DA001CEC03 /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 			children = (
 				FB12AC852640692A00390EE4 /* main.swift */,
 				FB12AC8D26406E0E00390EE4 /* README.md */,
+				FBA4C87F27BD87A1001CEC03 /* Priority Queue.swift */,
+				FBA4C88127BD87FA001CEC03 /* Deque.swift */,
+				FBA4C88327BF14DA001CEC03 /* Heap.swift */,
 			);
 			path = "swift-data-structures";
 			sourceTree = "<group>";
@@ -121,7 +130,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA4C88027BD87A1001CEC03 /* Priority Queue.swift in Sources */,
 				FB12AC862640692A00390EE4 /* main.swift in Sources */,
+				FBA4C88227BD87FA001CEC03 /* Deque.swift in Sources */,
+				FBA4C88427BF14DA001CEC03 /* Heap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
