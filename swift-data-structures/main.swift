@@ -14,9 +14,26 @@ import Foundation
  */
 
 struct DequeFaseDeProduccion{
-     
+    
+    var prioriedad: Int
+    var tejido: Int
+    var costura: Int
+    var acabado: Int
+    var lavado: Int
+    var zurcido: Int
+    var vaporizado: Int
+    var acabadoFinal: Int
+    var enbolsado: Int
+    
+    func suma(prioriedad: Int, tejido: Int, costura:Int, acabado: Int, lavado: Int, zurcido: Int, vaporizado: Int,acabadoFinal: Int, embolsado: Int) -> Int{
+        let tiempoTotalDeFabricacion: Int
+        tiempoTotalDeFabricacion = (tejido + costura + acabado + lavado + zurcido + vaporizado + acabadoFinal + embolsado) / 8
+        return tiempoTotalDeFabricacion
+    }
 }
 
+//Creando Objeto
+var colaDobleDeFaseDeProduccion: Deque<DequeFaseDeProduccion> = Deque<DequeFaseDeProduccion>()
 
 
 var isMainMenuRunning: Bool = true
@@ -50,7 +67,12 @@ while(isMainMenuRunning){
         print("|-------------------------------------------------------------------------------------------------------------------------------|")
         print("| NUMERO | COLOR | PRIORIEDAD | TEJIDO | COSTURA | ACABADO | LAVADO | ZURCIDO | VAPORIZADO | ACABADO | EMBOLSADO | TIEMPO TOTAL |")
         print("| CHOMPA |       |            |        |         |         |        |         |            |   FINAL |           | FABRICACION  |")
-
+        let secuencia = DequeFaseDeProduccion.getElemnts()
+        secuencia.forEach{ item in
+            print(" \(item.color)")
+            
+        }
+        
         break
     case "4":
         print("Gracias!!!")

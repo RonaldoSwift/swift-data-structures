@@ -49,4 +49,8 @@ public struct Deque<T> {
   public func peekBack() -> T? {
     return array.last
   }
+    
+    public func getElemnts() -> [T] {
+        return array
+    }
 }
